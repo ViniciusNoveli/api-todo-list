@@ -119,3 +119,6 @@ def updateByTaskName(userId: int, taskName: str, taskUpdated: Todo):
             aux = aux + 1
     return HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='You dont have tasks with this name')
 
+@app.get("/token")
+def getToken():
+    

@@ -26,7 +26,6 @@ header{
 
 .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
     font-size: 30px;
     text-align: center;
@@ -85,6 +84,182 @@ header{
   }
 
   .botoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  :root {
+    --red: #b00;
+    --blue: #00b;
+    --fullwidth: 100%;
+    --bg:#EAEDEF;
+    --leftwidth:10%;
+    --rightwidth:90%;
+    --itemheight:70px;
+    --bgleft:#333;
+    --hilitecolor:#007FF7;
+    --rowheight:35px;
+    --glyphsizeleft:20px;
+    --tabheight:30px;
+    --labeldisp:block;
+    --leftlinecol:transparent;
+  }
+  
+   .modalWindow_container {
+     perspective: 1300px;
+      position: absolute;
+      font-family: "JetBrains Mono",monospace;
+      color: #36395A;
+     width:100%;
+     height:100%;
+     top:0px;
+     left:0px;
+      pointer-events:none;
+      z-index: 99999;
+      opacity:0;
+       transition: opacity 400ms;
+       background:rgba(0,0,0,0.8);
+   }
+   
+  .modalWindow {
+      transform-origin: 50% 50%;
+      transform-style: preserve-3d;
+      width: 200px;
+      height:auto;
+      box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+      position: absolute;
+      top:calc(50% - 100px);
+      left:calc(50% - 100px);
+      margin: auto;
+      padding: 5px 20px 13px 20px;
+      border-radius: 0px;
+      background: #fff;
+  }
+  
+  .mockup_leftpane_item  .glyphicon {
+    font-size:var(--glyphsizeleft);
+  }
+  
+  html,body {
+    font-size:12px;
+    font:'Open-Sans';
+    width:100%;height:100%;margin:0;padding:0;
+    white-space:nowrap;
+  }
+  body {
+    background:var(--bg);
+    height:100%;
+    font-family: "JetBrains Mono",monospace;
+    color: #36395A;
+  }
+  .selected {
+    color:var(--hilitecolor) !important;
+  }
+  
+  .button {
+    background:var(--hilitecolor);
+    color:white;
+    padding:5px;
+    display:inline-block;
+    border-radius:2px;
+    text-align:center;
+    margin-top:5px;
+  }
+  
+  table {
+     margin-left: 20px;
+      margin-right: 10px;
+    /*box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);*/
+    border:1px solid #ddd;
+    width:90%;
+  }
+  
+  .shadow {
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  }
+  
+  table tr {
+    height:var(--rowheight);
+    line-height:var(--rowheight);
+    border-bottom:1px solid #EAEAEA;
+  }
+  
+  table tr:last-child {
+    border-bottom:none;
+  }
+  
+  td:first-child { padding-left:10px }
+  td:last-child {color:#777;}
+  td:last-child:hover {color:var(--hilitecolor);}
+  
+  .mockup_footer {
+    width:100%;
+    left:0px;
+    background:grey;
+    bottom:0px;
+    color:white;
+    height:30px;
+    line-height:30px;
+    position:absolute;
+  }
+  
+  
+  .mockup_header {
+    width:100%;
+    color:white;
+    height:50px;
+    line-height:50px;
+    background:var(--hilitecolor);
+  }
+  
+  .mockup_leftpane_top {
+    width:10%;
+    height:50px;
+    position:absolute;
+    left:0px;
+    top:0px;
+    background:grey;
+  }
+  
+  .mockup_leftpane {
+    width:var(--leftwidth);
+    height:100%;
+    background:var(--bgleft);
+    display:inline-block;
+    position:relative;
+    min-width:50px;
+    z-index:9;
+     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .mockup_leftpane_item {
+    text-align:center;
+    position:relative;
+    height:var(--itemheight);
+    border-bottom:1px solid var(--leftlinecol);
+  }
+  
+  .item_container {
+    color:#81898e;
+    width:auto;
+    height:auto;
+    top:50%;
+    position:relative;
+    transform:translateY(-50%);
+  }
+  
+  .mockup_middlepane {
+    text-align:left;
+    display:inline-block;
+    vertical-align:top;
+    margin-left:-4px;
+    height:100%;
+    position:relative;
+    width:var(--rightwidth);
+  }
+
+  .centralize{
     display: flex;
     align-items: center;
     justify-content: center;

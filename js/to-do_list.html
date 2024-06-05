@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/dc077a86f0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style2.css">
     <script src="front.js"></script>
     <title>Document</title>
@@ -14,14 +15,52 @@
     </header>
 
     <div class="botoes">
-        <button class="button-30"> Adicionar </button>
-        <button class="button-30"> Editar </button>
-        <button class="button-30"> Remover </button>
+        <button class="button-30" id="add"> Adicionar </button>
+        <button class="button-30" id="remove"> Remover </button>
     </div>
 
-    <div id="principal">
-        <div id="header-menu" class="menu-principal"><p class="grid-item">Tarefa</p> <p class="grid-item">Descrição</p> <p class="grid-item">Data</p> <p class="grid-item">Status</p></div>
+    <div class="centralize">
+        <div class='mockup_middlepane'>
+            <table class='shadow' id="table-main">
+            <tbody>
+                <tr style='background:white'>
+                <td>Title</td><td>Description</td><td>Date</td><td>Edit</td>
+                </tr>
+            </tbody>
+
+            </table>
+
+            
+            <div class="modalWindow_container" id='modal1'>
+                <div class="modalWindow">	
+                <br/>
+                <div>
+                Title:
+                </div>
+                <div  id='modalname' contenteditable='true' style='background:#eee;'>
+                </div>
+                <div>
+                Description:
+                </div>
+                <div  id='modaldate' contenteditable='true' style='background:#eee;'>
+                </div>
+                <div>
+                Date:
+                </div>
+                <div id='modalamt' contenteditable='true' style='background:#eee;'>
+                </div>
+                <br/>
+                <div style='text-align:right'>
+                <div class='button ok'>OK</div>
+                </div>
+            </div>   
+        </div>
     </div>
 
 </body>
 </html>
+
+
+
+
+
